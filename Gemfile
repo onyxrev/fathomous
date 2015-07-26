@@ -4,7 +4,6 @@ gem 'rails', '4.2.3'
 gem 'pg'
 
 gem 'trailblazer', '0.3.3'
-gem 'minitest'
 gem 'yard', group: :doc
 
 gem 'roar'
@@ -26,6 +25,11 @@ group :development, :test do
 
   gem 'database_cleaner'
   gem 'capybara'
+  gem "faker", '~> 1.4.3'
+  gem 'factory_girl', "~> 4.5.0"
+  gem 'rspec-mocks',  "~> 2.14.0"
+  gem 'rspec-rails',  "~> 2.14.2"
+  gem 'simplecov'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
