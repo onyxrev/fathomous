@@ -3,8 +3,8 @@ require 'spec_helper'
 describe "Post" do
   describe "Create" do
     describe "with valid post data" do
-      let (:built_post){ FactoryGirl.build(:post) }
-      let (:post){ Post::Create[ post: built_post.as_json ].model }
+      let! (:built_post){ FactoryGirl.build(:post) }
+      let! (:post){ Post::Create[ post: built_post.as_json ].model }
 
       it "persists" do
         expect(post.persisted?).to be_true
@@ -14,9 +14,9 @@ describe "Post" do
     end
 
     describe "with invalid post data" do
-      let (:run){ Post::Create.run(post: { title: "", body: "" }) }
-      let (:result){ run.first }
-      let (:operation){ run.last }
+      let! (:run){ Post::Create.run(post: { title: "", body: "" }) }
+      let! (:result){ run.first }
+      let! (:operation){ run.last }
 
       it "persists" do
         expect(result).to be_false

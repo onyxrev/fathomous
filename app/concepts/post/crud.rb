@@ -70,5 +70,9 @@ class Post < ActiveRecord::Base
     def model!(params)
       Post.all
     end
+
+    def process(params)
+      @model = model!(params)
+    end
   end
 end
