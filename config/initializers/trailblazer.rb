@@ -1,5 +1,16 @@
-# I extend the CRUD module here to make it also include CRUD::ActiveModel globally. This is my choice as the
-# application architect. Don't do it if you don't use ActiveModel form builders/models.
+require "roar/json"
+require 'trailblazer/autoloading'
+
+::Roar::Representer.module_eval do
+  include Rails.application.routes.url_helpers
+  # include Rails.app.routes.mounted_helpers
+
+  def default_url_options
+    {}
+  end
+end
+# end
+
 Trailblazer::Operation::CRUD.module_eval do
   module Included
     def included(base)
