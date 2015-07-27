@@ -9,7 +9,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    run Post::Update do |op|
+    run Post::Read do |op|
       return render json: op
     end
   end

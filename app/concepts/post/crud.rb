@@ -38,6 +38,12 @@ class Post < ActiveRecord::Base
     end
   end
 
+  class Read < Create
+    def process(params)
+      @model = find_model(params)
+    end
+  end
+
   class Update < Create
     def process(params)
       @model = find_model(params)
