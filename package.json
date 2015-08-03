@@ -1,0 +1,24 @@
+{
+  "name": "Fathomous",
+  "dependencies" : {
+    "browserify": "~> 10.2.4",
+    "browserify-incremental": "^3.0.1",
+    "can-compilify": "*",
+    "can": "~> 2.2.7",
+    "jquery": "~> 2.1.4"
+  },
+  "license": "Apache",
+  "engines": {
+    "node": ">= 0.12"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "can-compilify",
+        {
+          "version": "2.2.7"
+        }
+      ]
+    ]
+  }
+}
