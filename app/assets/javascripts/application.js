@@ -1,6 +1,10 @@
 var $ = require('jquery');
-var template = require('./templates/foo.stache');
+
+var router      = require('./router');
+var MainControl = require('./controls/main');
 
 $(document).ready(function(){
-  $("body").append(template({greeting: 'Hello'}));
+  router({
+    mainControl: new MainControl("body")
+  });
 });

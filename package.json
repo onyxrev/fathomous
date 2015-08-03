@@ -5,7 +5,9 @@
     "browserify-incremental": "^3.0.1",
     "can-compilify": "*",
     "can": "~> 2.2.7",
-    "jquery": "~> 2.1.4"
+    "jquery": "~> 2.1.4",
+    "lodash": "*",
+    "require-globify": "*"
   },
   "license": "Apache",
   "engines": {
@@ -18,7 +20,8 @@
         {
           "version": "2.2.7"
         }
-      ]
+      ],
+      "require-globify"
     ]
   }
 }
